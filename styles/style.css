@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+}
+
+
+.color-box{
+	border: 1px solid black;
+	margin: auto;
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+.hex-digits{
+	color:black;
+	font-size: 100px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 20%;
+	opacity: 0;
+	z-index: 2;
+}
+
+.clock-digits{
+	color:black;
+	font-size:100px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 20%;
+	z-index: 1;
+}
+
+.hex-digits:hover{
+	opacity: 1;
+
+}
+
+.hex-digits:hover ~ .clock-digits{
+	opacity: 0;
+}
