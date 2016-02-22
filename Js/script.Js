@@ -1,4 +1,5 @@
 
+
 var clock_El = document.querySelector(".clock-digits")
 var hex_El = document.querySelector(".hex-digits")
 var colorBackground_El = document.querySelector(".color-box")
@@ -20,7 +21,7 @@ var hexData = "#2c3e50"
 var hexSplit = hexData.split('')
 hex_El.innerHTML = hexSplit[1]+hexSplit[2]+":"+hexSplit[3]+hexSplit[4]+":"+hexSplit[5]+hexSplit[6]
 
-
+// UPDATE REPO
 
 // var hex_El_showing = true
 
