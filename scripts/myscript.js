@@ -21,13 +21,20 @@ var writeTime = function(){
 
 	var newWidthPercentage = second / 60 * 100 + "%"
 	myBar_El.style.width = newWidthPercentage
+
+	var r = Math.round(hour / 24 * 255)
+	var	g = Math.round(minute / 60 * 255 )
+	var b = Math.round(second / 60 * 255)
+
+
+	colorBackground_El.style.background = "radial-gradient(circle,white,rgba(" + r + "," + g + "," + b + ", 1))"
 }
 
 var TickingTimer = setInterval(function(){
 
 	writeTime()
 
-
+ 
 },1000);
 
 
@@ -42,44 +49,3 @@ hex_El.innerHTML = hexSplit[1]+hexSplit[2]+":"+hexSplit[3]+hexSplit[4]+":"+hexSp
 
 
 
-
-
-
-
-
-
-// UPDATE REPO
-
-
-
-// var currentTimeInfo = {
-// 	dateData : {
-// 		year: 2016,
-// 		month: 2,
-// 		dayOfMonth: 19,
-// 		dayOfWeek: 5,
-// 		hourOfDay: 11,
-// 		minuteOfHour: 30,
-// 		secondsOfMinute: 6
-// 	}
-
-// 	getFullYear: function(){
-// 		return this.dateData.year
-// 	},
-
-// 	setFullYear: function(yr){
-// 		this.dateData.year = yr
-
-// 		return this.dateData.year
-// 	}
-
-// }
-
-// BAD!!
-// currentTimeInfo.year
-
-// GOOD~
-// currentTimeInfo.getFullYear()
-
-// currentTimeInfo.setFullYear(2013)
-// var threeYearsAgoFromNow = currentTimeInfo

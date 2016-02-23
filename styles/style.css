@@ -61,7 +61,7 @@
 }
 .prog_bar{
     position: absolute;
-    height: 20px;
+    height: 10px;
     font-size: 20px;
     background-color: #2980b9;
     top: 54%;
