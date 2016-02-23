@@ -6,7 +6,7 @@
 .color-box{
 	border: 1px solid black;
 	margin: auto;
-	position: absolute;
+	position: fixed;
 	top:0;
 	left: 0;
 	right: 0;
@@ -21,6 +21,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 50%;
 	right: 0;
 	bottom: 0;
 	height: 20%;
@@ -35,6 +36,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 50%;
 	right: 0;
 	bottom: 0;
 	height: 20%;
@@ -48,4 +50,22 @@
 
 .hex-digits:hover ~ .clock-digits{
 	opacity: 0;
+}
+.prog_bar_container{
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translateX(-50%);
+	width:80%;
+	margin: 0 auto;
+}
+.prog_bar{
+    position: absolute;
+    height: 20px;
+    font-size: 20px;
+    background-color: #2980b9;
+    top: 54%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s all linear;
 }

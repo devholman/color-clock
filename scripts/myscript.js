@@ -3,42 +3,53 @@
 var clock_El = document.querySelector(".clock-digits")
 var hex_El = document.querySelector(".hex-digits")
 var colorBackground_El = document.querySelector(".color-box")
+var myBar_El = document.querySelector(".prog_bar")
 
 
 // clock
-var dateObj = new Date()
-var digits = dateObj.toTimeString()
+
+var writeTime = function(){
+	var dateObj = new Date()
+	var second = dateObj.getSeconds()
+	var minute = dateObj.getMinutes()
+	var hour = dateObj.getHours()
+
+	realTime = hour + ":" + minute + ":" + second
+	clock_El.innerHTML = realTime
 
 
-timeSplit = digits.split(" ")
-realTime = timeSplit[0]
-clock_El.innerHTML = realTime
+
+	var newWidthPercentage = second / 60 * 100 + "%"
+	myBar_El.style.width = newWidthPercentage
+}
+
+var TickingTimer = setInterval(function(){
+
+	writeTime()
+
+
+},1000);
+
+
 
 
 // hex colors
-colorBackground_El.style.background = "radial-gradient(circle,white,#2c3e50)"
+
+colorBackground_El.style.background = "radial-gradient(circle,white,rgba(44, 62, 80,.5))"
 var hexData = "#2c3e50"
 var hexSplit = hexData.split('')
 hex_El.innerHTML = hexSplit[1]+hexSplit[2]+":"+hexSplit[3]+hexSplit[4]+":"+hexSplit[5]+hexSplit[6]
 
+
+
+
+
+
+
+
+
 // UPDATE REPO
 
-// var hex_El_showing = true
-
-
-// var hexShow = function(){
-	
-// 	if (hex_El_Showing === true){
-// 		hex_El_Showing.style.display = 'none';
-// 		clock_El.style.display = 'inline-block';
-// 		hex_El_Showing = false
-// 	}else{
-// 		hex_El_Showing.style.display = 'inline-block';
-// 		clock_El.style.display = 'none';
-// 		hex_El_Showing = true
-// 	}
-	
-// }
 
 
 // var currentTimeInfo = {
